@@ -655,6 +655,18 @@ textarea.form-control {
   }
 }
 
+.banner-section .title {
+  padding-right: 13px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #3085a3;
+}
+
+.banner-section .title h2 {
+  color: #3085a3;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
 .banner-section .simple {
   color: #fff;
   display: inline-block;
@@ -682,6 +694,20 @@ textarea.form-control {
 
 @media (max-width: 575px) {
   .banner-section .simple p { font-size: 18px; }
+}
+
+/* <<< Affiliations >>> */
+
+.affiliation-section .title { 
+  margin-bottom: 50px; 
+  border-bottom: 1px solid #6c757d;
+}
+
+.affiliation-section .simple {
+  color: #fff;
+  display: inline-block;
+  margin: auto;
+  padding: 33px;
 }
 
 /* <<< Work Side >>> */
@@ -762,6 +788,7 @@ textarea.form-control {
 .work-section .title {
   margin-top: 5px;
   margin-left: 1px;
+  margin-bottom: 25px;
   border-bottom: 1px solid #fff;
 }
 
@@ -852,6 +879,7 @@ textarea.form-control {
 .gallery-section .title {
   padding-right: 13px;
   margin-bottom: 80px;
+  border-bottom: 1px solid #3085a3;
 }
 
 /*---------------*/
@@ -975,7 +1003,10 @@ figure.effect-julia:hover p {
   justify-content: center;
 }
 
-.contact-section .title { margin-bottom: 50px; }
+.contact-section .title { 
+  margin-bottom: 50px; 
+  border-bottom: 1px solid #fff;
+}
 
 .contact-section .title h3 {
   color: #fff;
