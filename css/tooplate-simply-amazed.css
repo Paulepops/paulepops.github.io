@@ -617,13 +617,15 @@ textarea.form-control {
   align-items: flex-start;
 }
 
-.bg-blue-transparent { background-color: rgb(102 153 204 / 0.8); }
+.bg-blue-transparent { 
+  background-color: rgb(102 153 204 / 0.8); 
+}
 
 .banner-section .logo-fa {  
   color: #fff;
   max-width: 400px;
   margin-left: 5px;
-  padding-top: 43px;
+  padding-top: 10px;
   padding-bottom: 35px;
   font-size: 32px;
   margin-bottom: 60px;
@@ -657,7 +659,7 @@ textarea.form-control {
 
 .banner-section .title {
   padding-right: 13px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #3085a3;
 }
 
@@ -672,7 +674,11 @@ textarea.form-control {
   display: inline-block;
   margin: auto;
   margin-left: 97px;
-  padding: 33px 68px 34px 68px;
+  padding: 30px 60px 30px 60px;
+  position: relative;
+  top: -250px;
+  left: 200px;
+  max-width: 500px;
 }
 
 @media (max-width: 991px) {
@@ -699,8 +705,9 @@ textarea.form-control {
 /* <<< Affiliations >>> */
 
 .affiliation-section .title { 
+  color: #fff;
   margin-bottom: 50px; 
-  border-bottom: 1px solid #6c757d;
+  border-bottom: 1px solid #fff;
 }
 
 .affiliation-section .simple {
@@ -1123,7 +1130,7 @@ figure.effect-julia:hover p {
 
 @media (max-width: 1800px) {
   .footer { left: 15px; }
-  .container-2 { max-width: 1150px; }
+  .container-2 { max-width: 1250px; }
 }
 
 @media (max-width: 1733px) {
