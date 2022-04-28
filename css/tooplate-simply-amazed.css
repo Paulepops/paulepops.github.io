@@ -669,6 +669,13 @@ textarea.form-control {
   margin-bottom: 12px;
 }
 
+.banner-section .country {
+  color: #000;
+  font-size: 20px;
+  float: right;
+  padding-right: 15px;
+}
+
 .banner-section .simple {
   color: #fff;
   display: inline-block;
@@ -715,6 +722,33 @@ textarea.form-control {
   display: inline-block;
   margin: auto;
   padding: 33px;
+}
+
+.affiliation-section .flex-container {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+}
+
+.affiliation-section .flex-container .flex-item {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin: 3px;
+  border: 1px solid black;
+}
+
+.affiliation-section .flex-container .flex-item img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 /* <<< Work Side >>> */
