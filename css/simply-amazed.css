@@ -195,12 +195,8 @@ textarea.form-control {
 
 /* <<< Header >>> */
 .header, .footer {
-  position: fixed;
-  right: 0;
   width: 26vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  max-width: 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
 }
@@ -211,6 +207,9 @@ textarea.form-control {
   align-items: flex-center;
   z-index: 1;
 }
+
+.header.open { right: 0; }
+
 .footer {
   height: 40px;
   min-height: 40px;
@@ -220,9 +219,9 @@ textarea.form-control {
   padding: 8px 1vw;
   top: calc(100vh - 40px);
 }
+
 .footer p { color: #fff; }
 
-.header.open { right: 0; }
 .design { color: #fff; }
 
 .design a {
@@ -596,13 +595,6 @@ textarea.form-control {
 
 .work-section .container { max-width: 1242px; }
 
-.tm-work-item-inner {
-  max-width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-}
-
 .work-section .item.one { margin-top: 80px; }
 
 .work-section .item.two { margin-top: 161px; }
@@ -624,11 +616,6 @@ textarea.form-control {
           align-items: center;
   text-transform: uppercase;
   margin: 0 auto 30px;
-}
-
-.icn img {
-  border: 1px solid #fff;
-  border-radius: 100%; 
 }
 
 .work-section .item h3 {
