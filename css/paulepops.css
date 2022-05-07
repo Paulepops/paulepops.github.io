@@ -1,0 +1,206 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: #fff;
+    padding: 2px 5px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 8px;
+    background: #BF1722;
+    -webkit-transition: top .3s ease-out;
+    transition: top .3s ease-out;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    outline-color: transparent;
+    -webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
+/* <<< Header / Footer -- 900+ >>> */
+
+.header,
+.footer {
+    position: fixed;
+    right: 0;
+    width: 26vw;
+    background-color: #356ba2;
+    overflow-y: auto;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+.header {
+    height: calc(100vh - 40px);
+    background-color: #356ba2;
+    align-items: flex-center;
+    z-index: 1;
+}
+
+.header.open {
+    right: 0;
+}
+
+.footer {
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    background-color: #1a4b7c;
+    justify-content: space-between;
+    padding: 8px 1vw;
+    top: calc(100vh - 40px);
+}
+
+.footer p {
+    color: #fff;
+}
+
+/* <<< Navigation >>> */
+
+.navbar {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.navbar .navbar-nav {
+    position: relative;
+}
+
+a.nav-link:focus {
+    border-top: 2px dotted #ff0;
+    border-bottom: 2px dotted #ff0;
+}
+
+.navbar .navbar-nav>.nav-item {
+    font-weight: 500;
+    font-size: 18px;
+    background-image: url(../img/menu-item-bg.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    min-height: 82px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 66px;
+    margin-bottom: 38px;
+}
+
+.navbar .navbar-nav>.nav-item .icn {
+    padding-right: 20px;
+    display: inline-block;
+}
+
+.navbar .navbar-nav>.nav-item:last-child {
+    margin-bottom: 0;
+}
+
+.navbar .navbar-nav>.nav-item:hover>a.nav-link,
+.navbar .navbar-nav>.nav-item.active>a.nav-link {
+    background-color: transparent;
+    /* outline: 0; */
+    color: #99ccff;
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav>.nav-item>a.nav-link {
+    color: #fff;
+    -webkit-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+    padding: 0;
+}
+
+.navbar .navbar-nav>.nav-item>a.nav-link.current {
+    color: #99ccff;
+}
+
+/*   Responsive breakpoints 2020   */
+/* ------------------------------- */
+/*  320px —  480px: Mobile devices */
+/*  481px —  768px: iPads, Tablets */
+/*  769px — 1024px: Small screens, laptops */
+/* 1025px — 1200px: Desktops, large screens */
+/* 1201px and more: Extra large screens, TV */
+
+@media (max-width: 768px) {
+
+    .header,
+    .footer {
+        position: relative;
+        display: block;
+        z-index: 1;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 70px;
+        background-color: #356ba2;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        background-color: #1a4b7c;
+        padding: 10px;
+    }
+
+    .footer p:first-of-type {
+        font-weight: 500;
+        float: left;
+        padding-left: 5vw;
+    }
+
+    .footer p:last-of-type {
+        font-weight: 500;
+        float: right;
+        padding-right: 5vw;
+    }
+
+    .navbar .navbar-nav {
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+
+    a.nav-link:focus {
+        border: 2px dotted #ff0;
+    }
+
+    .navbar .navbar-nav>.nav-item {
+        display: inline-block;
+        margin: 0 auto;
+        max-width: 24vw;
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        background-image: none;
+    }
+
+    .navbar .navbar-nav>.nav-item .icn {
+        padding-left: 25px;
+        text-align: center;
+        align-self: center;
+    }
+
+    .nav-item .nav-link .menu-item {
+        display: block;
+    }
+}
+
+@media (max-height: 580px) {}
