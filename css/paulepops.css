@@ -23,13 +23,25 @@
     transition: top .1s ease-in;
 }
 
-/* <<< Header / Footer -- 900+ >>> */
+/* <<< CONTAINERS >>> */
+
+#outer {
+    width: 100%;
+    min-height: 100%;
+}
+
+#content-box {
+    overflow: hidden;
+    width: 75vw;
+}
+
+/* <<< HEADER / FOOTER >>> */
 
 .header,
 .footer {
     position: fixed;
     right: 0;
-    width: 26vw;
+    width: 25vw;
     background-color: #356ba2;
     overflow-y: auto;
     z-index: 1;
@@ -41,7 +53,7 @@
 }
 
 .header {
-    height: calc(100vh - 40px);
+    height: calc(100vh - 30px);
     background-color: #356ba2;
     align-items: flex-center;
     z-index: 1;
@@ -52,20 +64,18 @@
 }
 
 .footer {
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
+    height: 30px;
     background-color: #1a4b7c;
     justify-content: space-between;
-    padding: 8px 1vw;
-    top: calc(100vh - 40px);
+    padding: 5px 1vw;
+    top: calc(100vh - 30px);
 }
 
 .footer p {
     color: #fff;
 }
 
-/* <<< Navigation >>> */
+/* <<< NAVIGATION >>> */
 
 .navbar {
     padding: 0;
@@ -131,8 +141,8 @@ a.nav-link:focus {
     height: 100vh;
     min-height: 700px;
     display: flex;
-   align-items: flex-start;
-   padding-top: 5vh;
+    align-items: flex-start;
+    padding-top: 5vh;
 }
 
 .banner-section {
@@ -143,53 +153,54 @@ a.nav-link:focus {
 .work-section {
     position: relative;
     background-color: #6699cc;
-  }
-  
+}
+
 .certs-section {
     position: relative;
     background-color: #99ccff;
-  }
+}
 
-  .interests-section { 
+.interests-section {
     position: relative;
     background-color: #6699cc;
-  }
-    
-.parallax-window { background: transparent; }
+}
 
- /* << SECTION TITLES >> */
- 
+.parallax-window {
+    background: transparent;
+}
+
+/* << SECTION TITLES >> */
+
 .title {
     font-size: 2em;
     padding-right: 13px;
     margin-bottom: 15px;
-  }
-  
+}
+
 .banner-section .title {
-    color: #3085a3;
-    background-color: #dbe2db;
-    border-bottom: 1px solid #3085a3;
-  }
-  
+    color: #0a1e0e;
+    background-color: #9eb58d;
+    border-bottom: 1px solid #0a1e0e;
+}
+
 .work-section .title {
     color: #fff;
     background-color: #555;
     border-bottom: 1px solid #fff;
-  }
+}
 
-  .certs-section .title {
+.certs-section .title {
     color: #069;
     background-color: #bfdfff;
     border-bottom: 1px solid #069;
-  }
+}
 
-  .interests-section .title { 
+.interests-section .title {
     color: #333;
-    background-color: #fff;
+    background-color: #e5dacd;
     border-bottom: 1px solid #333;
-  }
-      
-  
+}
+
 /*   Responsive breakpoints 2020   */
 /* ------------------------------- */
 /*  320px —  480px: Mobile devices */
@@ -200,7 +211,7 @@ a.nav-link:focus {
 
 @media (max-width: 480px) {
 
-    .navbar .navbar-nav > .nav-item {
+    .navbar .navbar-nav>.nav-item {
         display: inline-block;
         padding: 10px 0 0;
         min-width: 23vw;
@@ -210,23 +221,26 @@ a.nav-link:focus {
         background-image: none;
     }
 
-    .navbar .navbar-nav > .nav-item .icn {
+    .navbar .navbar-nav>.nav-item .icn {
         display: block;
         padding-left: 5px;
         text-align: center;
     }
 
-    .navbar .navbar-nav > .nav-item .menu-item {
+    .navbar .navbar-nav>.nav-item .menu-item {
         display: block;
     }
 
 }
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
 
 @media (max-width: 1024px) {
+
+    #content-box {
+        overflow: hidden;
+        width: 100vw;
+    }
 
     .section {
         height: auto;
@@ -241,6 +255,7 @@ a.nav-link:focus {
     .footer {
         position: relative;
         display: block;
+        width: 100vw;
         z-index: 1;
     }
 
@@ -248,7 +263,6 @@ a.nav-link:focus {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
         height: 70px;
         margin: 0 auto;
         background-color: #356ba2;
@@ -256,8 +270,8 @@ a.nav-link:focus {
 
     .footer {
         position: fixed;
+        top: auto;
         bottom: 0;
-        width: 100vw;
         height: 30px;
         background-color: #1a4b7c;
         padding: 5px 10px;
@@ -306,8 +320,6 @@ a.nav-link:focus {
     }
 }
 
-@media (max-width: 1024px) {
-
-}
+@media (max-width: 1024px) {}
 
 @media (max-height: 580px) {}

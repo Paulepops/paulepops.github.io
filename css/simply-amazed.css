@@ -73,10 +73,6 @@ a:focus {
 .container-2 { max-width: 1250px; }
 
 /* <<< outer >>> */
-#outer {
-  width: 100%;
-  min-height: 100%;
-}
 
 .design { color: #fff; }
 
@@ -87,11 +83,6 @@ a:focus {
 
 .design a:hover { color: #99ccff; }
 
-/* <<< content-box >>> */
-#content-box {
-  overflow: hidden;
-  width: calc(74% + 1px);
-}
 
 /* <<< Banner side >>> */
 
@@ -414,7 +405,6 @@ figure.fig-effect:hover p {
 /*  769px — 1024px: Small screens, laptops */
 /* 1025px — 1200px: Desktops, large screens */
 /* 1201px and more: Extra large screens, TV */
-
 
 @media (max-height: 580px) {
   .navbar .navbar-nav { padding-top: 30px; }
