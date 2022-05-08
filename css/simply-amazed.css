@@ -93,27 +93,7 @@ a:focus {
   width: calc(74% + 1px);
 }
 
-.section {
-  height: 100vh;
-  min-height: 700px;
-  display: flex;
-  align-items: center;
-}
-
-.title {
-  font-size: 32px;
-  padding-right: 13px;
-  margin-bottom: 40px;
-}
-
 /* <<< Banner side >>> */
-.banner-section {
-  position: relative;
-  text-align: center;
-  background-color: #99ccff;
-  padding-top: 121px;
-  align-items: flex-start;
-}
 
 .bg-blue-transparent { 
   background-color: rgb(102 153 204 / 0.8); 
@@ -133,35 +113,25 @@ a:focus {
   border-radius: 50%;
 }
 
-.banner-section .logo-img span {
-  font-size: 38px;
-  display: block;
-  text-transform: uppercase;
-  margin-bottom: 17px;
+.banner-section .item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.banner-section .title {
-  color: #3085a3;
-  border-bottom: 1px solid #3085a3;
-  background-color: #dbe2db;
-}
-
-.banner-section .country {
+.banner-section .item .country {
   color: #000;
   font-size: 20px;
-  float: right;
+  font-weight: 400;
+  right: 0;
+  margin-top: -15px;
   padding-right: 15px;
 }
 
 .banner-section .simple {
   color: #fff;
-  display: inline-block;
-  margin: auto;
   padding: 30px 60px 30px 60px;
   position: relative;
-  top: -15vh;
-  left: 10vw;
-  max-width: 40vw;
 }
 
 .banner-section .simple p {
@@ -171,20 +141,14 @@ a:focus {
 
 /* <<< Affiliations >>> */
 
-.affiliation-section .title { 
-  color: #333;
-  background-color: #fff;
-  border-bottom: 1px solid #333;
-}
-
-.affiliation-section .simple {
+.interests-section .simple {
   color: #fff;
   display: inline-block;
   margin: auto;
   padding: 33px;
 }
 
-.affiliation-section .flex-container {
+.interests-section .flex-container {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -193,7 +157,7 @@ a:focus {
   align-content: normal;
 }
 
-.affiliation-section .flex-container .flex-item {
+.interests-section .flex-container .flex-item {
   display: block;
   flex-grow: 0;
   flex-shrink: 1;
@@ -204,7 +168,7 @@ a:focus {
   border: 1px solid black;
 }
 
-.affiliation-section .flex-container .flex-item img {
+.interests-section .flex-container .flex-item img {
   max-width: 10vw;
   max-height: 10vw;
   width: 10vw;
@@ -212,18 +176,8 @@ a:focus {
 }
 
 /* <<< Work Side >>> */
-.work-section {
-  padding-top: 90px!important;
-  padding-bottom: 90px!important;
-  min-height: 850px;
-  background-color: #6699cc;
-}
 
 .work-section .container { max-width: 1242px; }
-
-.work-section .item.one { margin-top: 80px; }
-
-.work-section .item.two { margin-top: 161px; }
 
 .work-section .item .icn {
   width: 119px;
@@ -261,12 +215,6 @@ a:focus {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   padding: 10px;
-}
-
-.work-section .title {
-  color: #fff;
-  background-color: #464646;
-  border-bottom: 1px solid #fff;
 }
 
 /* <<< Gallery section >>> */
@@ -341,16 +289,6 @@ a:focus {
 .gallery-slider figure p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
-}
-
-.gallery-section {
-  background-color: #99ccff;
-}
-
-.gallery-section .title {
-  color: #006699;
-  background-color: rgb(191, 223, 255);
-  border-bottom: 1px solid #3085a3;
 }
 
 /*-------------------------------------------------*/
@@ -435,19 +373,19 @@ figure.fig-effect:hover p {
 	transform: translate3d(0,0,0);
 }
 
-.gallery-section .slick-list { margin-bottom: 40px; }
+.certs-section .slick-list { margin-bottom: 40px; }
 
-.gallery-section .item {
+.certs-section .item {
   text-align: center;
   margin: 5px;
 }
 
-.gallery-section .slick-dots {
+.certs-section .slick-dots {
   position: unset;
   bottom: 0;
 }
 
-.gallery-section .slick-dots li {
+.certs-section .slick-dots li {
   background-color: #6699cc;
   width: 20px;
   height: 20px;
@@ -456,20 +394,18 @@ figure.fig-effect:hover p {
   transition: all 0.3s ease;
 }
 
-.gallery-section .slick-dots li.slick-active,
-.gallery-section .slick-dots li:hover {
+.certs-section .slick-dots li.slick-active,
+.certs-section .slick-dots li:hover {
   background-color: #006699;
 }
 
-.gallery-section .slick-dots li button { display: none; }
+.certs-section .slick-dots li button { display: none; }
 
 .container {
   padding-left: 50px;
   padding-right: 50px;
 }
 .container-2 { max-width: 1250px; }
-
-.parallax-window { background: transparent; }
 
 /*   Responsive breakpoints 2020   */
 /* ------------------------------- */
@@ -517,7 +453,7 @@ figure.fig-effect:hover p {
     padding-top: 20px;
     padding-bottom: 15px;
   }
-  .affiliation-section .flex-container .flex-item img { 
+  .interests-section .flex-container .flex-item img { 
     max-width: 20vw;
     max-height: 20vw;
     width: 20vw;
@@ -527,10 +463,8 @@ figure.fig-effect:hover p {
     text-align: center;
     margin-bottom: 30px;
   }
-  .work-section .item.one { margin-top: 0;}
-  .work-section .item.two { margin-top: 0; }
+  
   .work-section .item .icn { margin: 0 auto 20px; }
-  .gallery-section .title { margin-bottom: 40px; }
 }
 
 @media (max-width: 991px) {
@@ -566,14 +500,7 @@ figure.fig-effect:hover p {
   .navbar .navbar-nav > .nav-item { padding-left: 30px; }
   .nav-link .fa-2x { font-size: 1.2em; }  
   #content-box { width: 100%; }
-  .section {
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+
   .banner-section { padding-top: 0; }
   .banner-section .simple {
     margin: auto;
@@ -584,9 +511,8 @@ figure.fig-effect:hover p {
   } 
   .banner-section .simple p { font-size: 20px; }
   .banner-section .logo-img { margin: 0 auto 30px; }
-  .work-section .item.one { margin-top: 0;}
-  .work-section .item.two { margin-top: 0; }
-  .affiliation-section .flex-container .flex-item img { 
+  
+  .interests-section .flex-container .flex-item img { 
     max-width: 15vw;
     max-height: 15vw;
     width: 15vw;
@@ -598,7 +524,6 @@ figure.fig-effect:hover p {
   .banner-section .simple {
     margin: auto;
     padding: 20px 45px 20px 45px;
-    top: -15vh;
     left: 5vw;
     max-width: 85%;
   }

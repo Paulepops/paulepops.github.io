@@ -110,7 +110,6 @@ a.nav-link:focus {
 .navbar .navbar-nav>.nav-item:hover>a.nav-link,
 .navbar .navbar-nav>.nav-item.active>a.nav-link {
     background-color: transparent;
-    /* outline: 0; */
     color: #99ccff;
     transition: all 0.3s ease;
 }
@@ -126,6 +125,71 @@ a.nav-link:focus {
     color: #99ccff;
 }
 
+/* << SECTIONS >> */
+
+.section {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+   align-items: flex-start;
+   padding-top: 5vh;
+}
+
+.banner-section {
+    position: relative;
+    background-color: #99ccff;
+}
+
+.work-section {
+    position: relative;
+    background-color: #6699cc;
+  }
+  
+.certs-section {
+    position: relative;
+    background-color: #99ccff;
+  }
+
+  .interests-section { 
+    position: relative;
+    background-color: #6699cc;
+  }
+    
+.parallax-window { background: transparent; }
+
+ /* << SECTION TITLES >> */
+ 
+.title {
+    font-size: 2em;
+    padding-right: 13px;
+    margin-bottom: 15px;
+  }
+  
+.banner-section .title {
+    color: #3085a3;
+    background-color: #dbe2db;
+    border-bottom: 1px solid #3085a3;
+  }
+  
+.work-section .title {
+    color: #fff;
+    background-color: #555;
+    border-bottom: 1px solid #fff;
+  }
+
+  .certs-section .title {
+    color: #069;
+    background-color: #bfdfff;
+    border-bottom: 1px solid #069;
+  }
+
+  .interests-section .title { 
+    color: #333;
+    background-color: #fff;
+    border-bottom: 1px solid #333;
+  }
+      
+  
 /*   Responsive breakpoints 2020   */
 /* ------------------------------- */
 /*  320px —  480px: Mobile devices */
@@ -134,7 +198,44 @@ a.nav-link:focus {
 /* 1025px — 1200px: Desktops, large screens */
 /* 1201px and more: Extra large screens, TV */
 
+@media (max-width: 480px) {
+
+    .navbar .navbar-nav > .nav-item {
+        display: inline-block;
+        padding: 10px 0 0;
+        min-width: 23vw;
+        max-width: 23vw;
+        font-weight: 500;
+        font-size: 14px;
+        background-image: none;
+    }
+
+    .navbar .navbar-nav > .nav-item .icn {
+        display: block;
+        padding-left: 5px;
+        text-align: center;
+    }
+
+    .navbar .navbar-nav > .nav-item .menu-item {
+        display: block;
+    }
+
+}
+
 @media (max-width: 768px) {
+
+}
+
+@media (max-width: 1024px) {
+
+    .section {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
 
     .header,
     .footer {
@@ -149,6 +250,7 @@ a.nav-link:focus {
         left: 0;
         width: 100vw;
         height: 70px;
+        margin: 0 auto;
         background-color: #356ba2;
     }
 
@@ -156,8 +258,9 @@ a.nav-link:focus {
         position: fixed;
         bottom: 0;
         width: 100vw;
+        height: 30px;
         background-color: #1a4b7c;
-        padding: 10px;
+        padding: 5px 10px;
     }
 
     .footer p:first-of-type {
@@ -201,6 +304,10 @@ a.nav-link:focus {
     .nav-item .nav-link .menu-item {
         display: block;
     }
+}
+
+@media (max-width: 1024px) {
+
 }
 
 @media (max-height: 580px) {}
