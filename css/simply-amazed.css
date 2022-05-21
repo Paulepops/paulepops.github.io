@@ -259,6 +259,10 @@ a:focus {
 
 /* <<< Gallery section >>> */
 
+.gallery-slider {
+    margin-top: 15vh;
+}
+
 .gallery-slider figure {
     position: relative;
     float: left;
